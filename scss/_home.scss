@@ -1,0 +1,106 @@
+.header {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 99999;
+    .stars {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .logo {
+        height: 90%;
+        display: none;
+    }
+}
+
+.loaded {
+    animation: onLoad 2s ease-in-out;
+    height: 12vh;
+    .logo {
+        display: block;
+    }
+}
+.logoLoaded {
+    animation: logoAnimation 3s ease-in;
+    display: block !important;
+}
+
+.s-chars {
+    height: 100vh;
+    width: 100%;
+    margin-top: 14vh !important;
+    margin: 0;
+    bottom: 0;
+    padding: 1.5vw !important;
+    .mySwiper {
+        overflow: visible;
+        .swiper-slide {
+                height: 80vh;
+                width: 35rem !important;
+                overflow: hidden !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                transition: all 1s ease;
+                img {
+                    top: 0;
+                    filter: grayscale(100%);
+                    height: 100%;
+                    max-width: 600%;
+                    transition: all 1s ease;
+                }
+                .info {
+                    background-color: rgba($color: #000000, $alpha: 0.8);
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    transform: translateY(200%);
+                    transition: all 1s ease;
+                    padding: 1vh 0;
+                    h2 {
+                        margin-left: 1rem;
+                        font-size: 4vh;
+                    }
+                    p {
+                        margin-left: 1rem;
+                        font-size: 2.5vh;
+                    }
+                }
+        }
+        .swiper-slide:hover {
+            .info {
+                transform: translateY(0%);
+                transition: all .3s ease-in;
+            }
+            img {
+                filter: grayscale(0);
+                transform: scale(1.1);
+                transition: all .3s ease-in;
+            }
+        }
+        .sith:hover {
+            box-shadow: 0px 0px 10px 10px rgba(255,0,0,0.5);
+        }
+        .jedi:hover {
+            box-shadow: 0px 0px 10px 10px rgba(7,133,179,0.5);
+        }
+        .rebel:hover {
+            box-shadow: 0px 0px 10px 10px rgba(231,166,26,0.5);
+        }
+     }
+}
